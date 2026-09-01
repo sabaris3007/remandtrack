@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans", "Noto Sans Devanagari", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Noto Sans Display", "Noto Sans", "Noto Sans Devanagari", system-ui, sans-serif;
+  --font-mono: "Noto Sans Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-serif: "Noto Sans Display", "Noto Sans", system-ui, sans-serif;
+}
+
+/* ==========================================================================
+   UX4G Typography System (Government of India Design System Foundations)
+   https://www.ux4g.gov.in/foundations/typography
+   ========================================================================== */
+
+:root {
+  /* Font Family Tokens */
+  --ux4g-font-family-base: "Noto Sans", "Noto Sans Devanagari", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ux4g-font-family-display: "Noto Sans Display", "Noto Sans", "Noto Sans Devanagari", system-ui, sans-serif;
+  --ux4g-font-family-mono: "Noto Sans Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Type Scale Tokens (Primitive Rem-based) */
+  --ux4g-size-10: 0.625rem;  /* 10px */
+  --ux4g-size-12: 0.75rem;   /* 12px */
+  --ux4g-size-14: 0.875rem;  /* 14px */
+  --ux4g-size-16: 1rem;      /* 16px - Base Body */
+  --ux4g-size-18: 1.125rem;  /* 18px */
+  --ux4g-size-20: 1.25rem;   /* 20px */
+  --ux4g-size-24: 1.5rem;    /* 24px - H3 */
+  --ux4g-size-28: 1.75rem;   /* 28px - H2 */
+  --ux4g-size-32: 2rem;      /* 32px - H1 */
+  --ux4g-size-36: 2.25rem;   /* 36px - Display 2 */
+  --ux4g-size-48: 3rem;      /* 48px - Display 1 */
+  --ux4g-size-64: 4rem;      /* 64px - Hero */
+
+  /* Line Height Tokens */
+  --ux4g-line-height-14: 0.875rem; /* 14px */
+  --ux4g-line-height-16: 1rem;     /* 16px */
+  --ux4g-line-height-20: 1.25rem;  /* 20px */
+  --ux4g-line-height-24: 1.5rem;   /* 24px */
+  --ux4g-line-height-28: 1.75rem;  /* 28px */
+  --ux4g-line-height-32: 2rem;     /* 32px */
+  --ux4g-line-height-36: 2.25rem;  /* 36px */
+  --ux4g-line-height-44: 2.75rem;  /* 44px */
+  --ux4g-line-height-52: 3.25rem;  /* 52px */
+  --ux4g-line-height-80: 5rem;     /* 80px */
+
+  /* Font Weights */
+  --ux4g-font-weight-regular: 400;
+  --ux4g-font-weight-medium: 500;
+  --ux4g-font-weight-semibold: 600;
+  --ux4g-font-weight-bold: 700;
+}
+
+html {
+  font-family: var(--ux4g-font-family-base);
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  transition: font-size 0.15s ease-in-out;
+}
+
+/* Accessibility Font-Sizing Modes (GIGW 3.0 / UX4G Standard) */
+html[data-font-size="standard"] {
+  font-size: 16px;
+}
+
+html[data-font-size="large"] {
+  font-size: 18px;
+}
+
+body {
+  font-family: var(--ux4g-font-family-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--ux4g-line-height-24);
+  color: #0f172a;
+}
+
+/* Headings inherit UX4G Display typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ux4g-font-family-display);
+  letter-spacing: -0.015em;
+}
+
+/* UX4G Standard Typography Utility Classes */
+.ux4g-display-1 {
+  font-family: var(--ux4g-font-family-display);
+  font-size: var(--ux4g-size-48);
+  line-height: var(--ux4g-line-height-52);
+  font-weight: var(--ux4g-font-weight-bold);
+  letter-spacing: -0.025em;
+}
+
+.ux4g-display-2 {
+  font-family: var(--ux4g-font-family-display);
+  font-size: var(--ux4g-size-36);
+  line-height: var(--ux4g-line-height-44);
+  font-weight: var(--ux4g-font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+.ux4g-heading-h1 {
+  font-family: var(--ux4g-font-family-display);
+  font-size: var(--ux4g-size-32);
+  line-height: var(--ux4g-line-height-36);
+  font-weight: var(--ux4g-font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+.ux4g-heading-h2 {
+  font-family: var(--ux4g-font-family-display);
+  font-size: var(--ux4g-size-28);
+  line-height: var(--ux4g-line-height-32);
+  font-weight: var(--ux4g-font-weight-semibold);
+  letter-spacing: -0.015em;
+}
+
+.ux4g-heading-h3 {
+  font-family: var(--ux4g-font-family-display);
+  font-size: var(--ux4g-size-24);
+  line-height: var(--ux4g-line-height-28);
+  font-weight: var(--ux4g-font-weight-semibold);
+  letter-spacing: -0.01em;
+}
+
+.ux4g-heading-h4 {
+  font-family: var(--ux4g-font-family-display);
+  font-size: var(--ux4g-size-20);
+  line-height: var(--ux4g-line-height-28);
+  font-weight: var(--ux4g-font-weight-semibold);
+}
+
+.ux4g-body-large {
+  font-family: var(--ux4g-font-family-base);
+  font-size: var(--ux4g-size-18);
+  line-height: var(--ux4g-line-height-28);
+  font-weight: var(--ux4g-font-weight-regular);
+}
+
+.ux4g-body {
+  font-family: var(--ux4g-font-family-base);
+  font-size: var(--ux4g-size-16);
+  line-height: var(--ux4g-line-height-24);
+  font-weight: var(--ux4g-font-weight-regular);
+}
+
+.ux4g-body-small {
+  font-family: var(--ux4g-font-family-base);
+  font-size: var(--ux4g-size-14);
+  line-height: var(--ux4g-line-height-20);
+  font-weight: var(--ux4g-font-weight-regular);
+}
+
+.ux4g-caption {
+  font-family: var(--ux4g-font-family-base);
+  font-size: var(--ux4g-size-12);
+  line-height: var(--ux4g-line-height-16);
+  font-weight: var(--ux4g-font-weight-medium);
+}
+
+.ux4g-label {
+  font-family: var(--ux4g-font-family-base);
+  font-size: var(--ux4g-size-12);
+  line-height: var(--ux4g-line-height-16);
+  font-weight: var(--ux4g-font-weight-semibold);
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.ux4g-mono {
+  font-family: var(--ux4g-font-family-mono);
+  font-feature-settings: "tnum" on, "lnum" on, "zero" on;
+}
+
