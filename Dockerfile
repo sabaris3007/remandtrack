@@ -18,11 +18,8 @@ RUN pip3 install --no-cache-dir --break-system-packages \
     -r /tmp/pdf-requirements.txt \
     -r /tmp/audit-requirements.txt
 
-# Copy application code
+# Copy application code (including pre-seeded cases.db)
 COPY . .
-
-# Seed database to ensure 1,000 records are indexed into SQLite
-RUN npx tsx backend/seed.ts
 
 # Build the frontend production bundle (Vite -> /dist)
 RUN npm run build
