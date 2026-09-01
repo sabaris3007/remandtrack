@@ -21,6 +21,9 @@ RUN pip3 install --no-cache-dir --break-system-packages \
 # Copy application code
 COPY . .
 
+# Seed database to ensure 1,000 records are indexed into SQLite
+RUN npx tsx backend/seed.ts
+
 # Build the frontend production bundle (Vite -> /dist)
 RUN npm run build
 
